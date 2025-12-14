@@ -29,11 +29,9 @@ MySQL or any relational database
 
 ## Architecture
 
-+----------------+      +-------------------+      +-----------------+
+
 | ApiConfig Table| ---> | GenericApiService | ---> | TempUser Table  |
-| (API URL, token|      |  Fetch & parse    |      | Stores users    |
-| authType, etc.)|      |  API response     |      | from any API    |
-+----------------+      +-------------------+      +-----------------+
+   
            ^
            |
     UserController
@@ -53,11 +51,11 @@ Response is parsed into DTOs (UserDto).
 Users are saved in TempUser table.
 
 ## API Endpoints
-### Method	### Endpoint	### Description
+### Method	 Endpoint	Description
 GET	/api/users/{apiName}	Fetch users for given API and store in DB
 POST	/api/users/{apiName}/update-token	Update token dynamically for
 
-##Technologies Used
+## Technologies Used
 
 Java 17
 
